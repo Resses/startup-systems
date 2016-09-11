@@ -1,0 +1,40 @@
+.header{
+    background-color: Lavender;
+    padding: 20px;
+}
+
+h1,h2,h3, h4{
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bolder;
+}
+
+h1{
+    font-size: 3.5em;
+}
+
+h4{
+    display:inline;
+}
+.pic{
+    float:left;
+}
+
+.about{
+    padding: 20px;
+}
+
+body{
+    background-color: AliceBlue;
+    font-size: 16px;
+}
+
+/*This takes away the gray bars from the side of the carousel images*/
+/*Code taken from http://stackoverflow.com/questions/18559682/twitter-bootstrap-carousel-grey-bars*/
+.carousel-control.left, 
+.carousel-control.right {
+    background-image: none
+}
+
+#myCarousel{
+    width:60%;
+}
