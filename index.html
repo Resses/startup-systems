@@ -26,12 +26,13 @@
       ga('send', 'pageview');
     </script>
 
+
 </head>
 
 <body>
     <div class = "header container-fluid text-center">
         <figure class="figure pic">
-            <img src="./Images/renee1.jpg" class="img-circle" width = "60"  alt="Picture of Me">
+            <img src="./Images/renee3.jpg" id="imgMe" class="img-circle" width = "60"  alt="Picture of Me">
             <figcaption class="figure-caption">NetId: rle87</p>
         </figure>
         <h1>RenéeEsses</h1>
@@ -43,13 +44,6 @@
 
         <!-- Carousel code was taken and modified from http://www.w3schools.com/bootstrap/bootstrap_carousel.asp -->
         <div id="myCarousel" class="carousel slide container" data-ride="carousel">  
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to=""></li>
-                <li data-target="#myCarousel" data-slide-to=""></li>
-                <li data-target="#myCarousel" data-slide-to=""></li>
-            </ol>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
@@ -78,9 +72,32 @@
             </a>
         </div>
     </div>
+
+    <!-- Code for this div taken from http://www.w3schools.com/howto/howto_css_modal_images.asp -->
+    <div id="popup" class="modal">
+        <span class="close" onclick="document.getElementById('popup').style.display='none'">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
     <div class = "contact container-fluid">
         <h4>Contact: </h4>
         <a href="mailto:rle87@cornell.edu">rle87@cornell.edu</a>
     </div>
+
+<!--Code for script taken from http://www.w3schools.com/howto/howto_css_modal_images.asp -->
+    <script>
+        var popup = document.getElementById('popup');
+        var img = document.getElementById('imgMe');
+        var imgPopup = document.getElementById("img01");
+        img.onclick = function(){
+            popup.style.display = "block";
+            imgPopup.src = this.src;
+        }
+        <!--The span closes the image-->
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() { 
+          popup.style.display = "none";
+        }
+    </script>
 </body>
 </html>
